@@ -7,4 +7,10 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
+ENV FLASK_DEBUG=true
+ENV DBNAME="restaurant"
+ENV DBHOST="mydb"
+ENV DBUSER="root"
+ENV DBPASS="josh"
+
 ENTRYPOINT ["/opt/app/start_app.sh"]
